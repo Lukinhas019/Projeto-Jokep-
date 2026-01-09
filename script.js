@@ -1,4 +1,9 @@
 const resultado = document.querySelector('.resultado')
+const placar1 = document.querySelector('.placar1')
+const placar2 = document.querySelector('.placar2')
+
+let pontosUsuario = 0
+let pontosMaquina = 0
 
 const escolhaUsuario = (escolhahumana) => {
 
@@ -24,9 +29,15 @@ const iniciarJogo = (humano, maquina) => {
         humano === 'pedra' && maquina === 'tesoura' ||
         humano === 'tesoura' && maquina === 'papel'
     ) {
+        pontosUsuario++
+        placar1.innerHTML = pontosUsuario
+
         resultado.innerHTML = 'VOCÊ VENCEU!'
     }
     else {
+        pontosMaquina++
+        placar2.innerHTML = pontosMaquina
+
         resultado.innerHTML = 'VOCÊ PERDEU!'
     }
 }
