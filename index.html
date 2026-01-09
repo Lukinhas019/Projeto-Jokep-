@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Jokenpô</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="conteiner">
+      <h1>JokenPô</h1>
+
+      <button class="pedra" onclick="escolhaUsuario('pedra')">&#9994;</button>
+      <button class="papel" onclick="escolhaUsuario('papel')">&#128400;</button>
+      <button class="tesoura" onclick="escolhaUsuario('tesoura')">
+        &#9996;&#65039;
+      </button>
+
+      <div class="placar">
+        <p class="placar1">Sua Pontuação : <span>0</span></p>
+        <p class="placar2">Pontuação da Máquina : <span>0</span></p>
+        <p class="resultado"></p>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>

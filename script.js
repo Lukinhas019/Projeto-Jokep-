@@ -1,0 +1,32 @@
+const resultado = document.querySelector('.resultado')
+
+const escolhaUsuario = (escolhahumana) => {
+
+    iniciarJogo(escolhahumana, escolhaMaquina())
+}
+
+const escolhaMaquina = () => {
+
+    const opcoes = ['pedra', 'papel', 'tesoura']
+    const escolhaAleatoria = Math.floor(Math.random() * 3)
+    return opcoes[escolhaAleatoria]
+}
+
+const iniciarJogo = (humano, maquina) => {
+
+    console.log('humano:', humano + ' maquina: ' + maquina)
+
+    if (humano === maquina) {
+        resultado.innerHTML = 'EMPATE!'
+    }
+    else if (
+        humano === 'papel' && maquina === 'pedra' ||
+        humano === 'pedra' && maquina === 'tesoura' ||
+        humano === 'tesoura' && maquina === 'papel'
+    ) {
+        resultado.innerHTML = 'VOCÊ VENCEU!'
+    }
+    else {
+        resultado.innerHTML = 'VOCÊ PERDEU!'
+    }
+}
